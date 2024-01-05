@@ -56,8 +56,8 @@ function Checked (mapCluster, L)
     'Vue map': L.mapbox.tileLayer('mapbox.streets').addTo(mapCluster),
     'Vue satellite': L.mapbox.tileLayer('mapbox.satellite')
   }, {
-    'Quartier de Celibataires': L.mapbox.featureLayer().loadURL('../example/geojson/celib.geojson'),
-    'Ligne Metro': L.mapbox.featureLayer().loadURL('../example/geojson/subway.geojson')
+    'Singles area': L.mapbox.featureLayer().loadURL('../example/geojson/celib.geojson'),
+    'Metro line': L.mapbox.featureLayer().loadURL('../example/geojson/subway.geojson')
   }).addTo(mapCluster);
 }
 
@@ -71,7 +71,7 @@ function Localisation (mapCluster)
   .on('locationfound', function(e)
   {
     L.marker(e.latlng).addTo(mapCluster)
-     .bindPopup('Vous êtes ici').openPopup();
+     .bindPopup('You are here').openPopup();
   });
 }
 
